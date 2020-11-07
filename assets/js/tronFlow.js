@@ -122,16 +122,7 @@ async function getBalanceOfAccount() {
     } else {
       $('#balance').text(0);
     }
-      
-      
-      let invester = await contract.players(currentAccount).call();
   
-  const userpayout = invester.payoutSum.toNumber() / 1000000;
-      if (userpayout > 0) {
-    $('#userpayout').val(userpayout.toFixed(2));
-  } else {
-    $('#userpayout').val(0);
-  }
       
     return balance;
   });
