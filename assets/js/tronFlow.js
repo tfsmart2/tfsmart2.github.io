@@ -57,6 +57,7 @@ $(document).ready(async () => {
       getTotalInvested(contract);
       getTotalInvestors(contract);
       getContractBalanceRate(contract);
+      getuserpayout(contract);
       invested = await getDeposit(contract);
       let profit, totalProfit, halfProfit;
       if (parseInt(invested) > 0) {
