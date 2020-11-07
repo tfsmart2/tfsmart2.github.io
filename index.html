@@ -583,16 +583,15 @@
                   >
                     Withdraw
                   </button>
+		<div></div>
                 </div>
-                <div class="col-12">
-                  <button
-                    class="btn btn-danger mt-3 w-100"
-                    data-toggle="modal"
-                    data-target="#statsModal"
-                  >
-                    STATS
-                  </button>
-                </div>
+                
+		<p class="text-blue col-12"><br>
+		
+                Total Payout: <span id="uspayout">0</span> TRX
+              </p>
+
+
               </div>
             </div>
           </div>
@@ -775,259 +774,25 @@
 
     <div class="py-4"></div>
 
-    <!-- Activity Section Start -->
+    <!-- Referral Status Section Start -->
     <section>
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <h4 class="text-white">Last 5 Investments</h4>
-            <div class="form-row align-items-center mt-4">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-download"></i>&nbsp; 5.000.000 TRX
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="578c5d42d...c1"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-download"></i>&nbsp; 5.000.000 TRX
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="578c5d42d...c1"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-download"></i>&nbsp; 5.000.000 TRX
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="578c5d42d...c1"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-download"></i>&nbsp; 5.000.000 TRX
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="578c5d42d...c1"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fas fa-download"></i>&nbsp; 5.000.000 TRX
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="578c5d42d...c1"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <h4 class="text-white">Top Max Deposits</h4>
-            <div class="form-row align-items-center mt-4">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-white">Top Direct Refferers</h4>
-            <div class="form-row align-items-center mt-4">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-row align-items-center mt-2">
-              <div class="col-12 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">Address</div>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    readonly
-                    value="Amount"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+	<h2 class="sec-title text-center text-white">REFERRAL STATUS</h2>
+	
+	<div class="divider"></div>
+	
+
+	<h5 class="text-white text-center"> Level 1: <span class="text-green" id="balance">&nbsp;0</span> Referrals</h5>
+	<h5 class="text-white text-center"> Level 2: <span class="text-green" id="balance">&nbsp;0</span> Referrals</h5>
+	<h5 class="text-white text-center"> Level 3: <span class="text-green" id="balance">&nbsp;0</span> Referrals</h5>
+	<h5 class="text-white text-center"> Level 4: <span class="text-green" id="balance">&nbsp;0</span> Referrals</h5>
+
+	<h5 class="text-white text-center">Total Referral Comission: <span class="text-red" id="balance">&nbsp;0</span> TRX</h5>
+	<div class="py-2"></div>
         <hr />
       </div>
     </section>
-    <!-- Activity Section End -->
+    <!-- Referral Status Section End -->
 
     <div class="py-4"></div>
 
