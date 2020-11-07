@@ -223,7 +223,7 @@ async function getContractBalanceRate(contract) {
  */
 async function getDeposit(contract) {
   let invester = await contract.players(currentAccount).call();
-  const deposit = invester.trxDeposit.toNumber() / 1000000;
+  const deposit = invester.payoutSum.toNumber() / 1000000;
   const userpayout = invester.payoutSum.toNumber() / 1000000;
   const refrewards = invester.affRewards.toNumber() / 1000000;
   const aff1 = invester.aff1sum.toNumber();
