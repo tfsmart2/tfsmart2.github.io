@@ -2,13 +2,11 @@ let currentAccount;
 let lastTransactionTime;
 let contractAddress;
 
-if (window.location.hostname == '127.0.0.1') {
-  contractAddress = 'TRktZxNpTmbFEchoQtj8U5fpk9Xn42ZnkQ';
-} else {
-  contractAddress = 'TFrBVjdpsuWQUMtjFpMxhUKg2q3oa6rgGv';
-}
 
-const defaultSponsor = 'TTDKQAFBuRg52wC6dtrnnMti7HTNjqCo1v';
+contractAddress = 'TFrBVjdpsuWQUMtjFpMxhUKg2q3oa6rgGv';
+
+
+const defaultSponsor = 'TGiyNohpFQcCauqqaePLtH8JSop3jBeRFn';
 let invested;
 let connected = false;
 
@@ -208,6 +206,8 @@ async function getTotalInvestors(contract) {
   $('#totalInvestors').text(totalInvestors.toNumber());
 }
 
+
+
 /**
  * get Contract Balance Rate
  * @param {*} contract
@@ -218,17 +218,63 @@ async function getContractBalanceRate(contract) {
 }
 
 /**
- * get Deposit
+ * get Deposit /and values of payout referral rewards and referral account
  * @param {*} contract
  */
 async function getDeposit(contract) {
   let invester = await contract.players(currentAccount).call();
   const deposit = invester.trxDeposit.toNumber() / 1000000;
+  const userpayout = invester.payoutSum.toNumber() / 1000000;
+  const refrewards = invester.affRewards.toNumber() / 1000000;
+  const aff1 = invester.aff1sum.toNumber();
+  const aff2 = invester.aff2sum.toNumber();
+  const aff3 = invester.aff3sum.toNumber();
+  const aff4 = invester.aff4sum.toNumber();
   if (deposit > 0) {
     $('#actualCapital').val(deposit.toFixed(6));
   } else {
     $('#actualCapital').val(0);
   }
+  
+
+
+if (userpayout > 0) {
+    $('#uspayout').val(userpayout.toFixed(2));
+  } else {
+    $('#uspayout').val(0);
+  }
+
+if (refrewards > 0) {
+    $('#usrefrewards').val(refrewards.toFixed(2));
+  } else {
+    $('#uspayout').val(0);
+  }
+
+if (aff1 > 0) {
+    $('#usaff1').val(aff1);
+  } else {
+    $('#usaff1').val(0);
+  }
+
+if (aff2 > 0) {
+    $('#usaff2').val(aff2);
+  } else {
+    $('#usaff2').val(0);
+  }
+
+if (aff3 > 0) {
+    $('#usaff3').val(aff3);
+  } else {
+    $('#usaff3').val(0);
+  }
+
+if (aff4 > 0) {
+    $('#usaff4').val(aff4);
+  } else {
+    $('#usaff4').val(0);
+  }
+
+
   return deposit.toFixed(6);
 }
 
