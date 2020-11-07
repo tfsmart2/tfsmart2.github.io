@@ -128,9 +128,9 @@ async function getBalanceOfAccount() {
   
   const userpayout = invester.payoutSum.toNumber() / 1000000;
       if (userpayout > 0) {
-    $('#uspayout').val(userpayout.toFixed(2));
+    $('#userpayout').val(userpayout.toFixed(2));
   } else {
-    $('#uspayout').val(0);
+    $('#userpayout').val(0);
   }
       
     return balance;
