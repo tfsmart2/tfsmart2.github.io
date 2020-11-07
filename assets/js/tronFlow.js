@@ -53,7 +53,7 @@ $(document).ready(async () => {
 
       const contract = await tronWeb.contract().at(contractAddress);
       
-    //  getuserpayout(contract); 
+    
       getTotalInvested(contract);
       getTotalInvestors(contract);
       getContractBalanceRate(contract);
@@ -218,24 +218,7 @@ async function getContractBalanceRate(contract) {
   $('#roi').text((contractbalanceRate.toNumber() / 10 + 1).toFixed(1));
 }
 
-/**
- * get Deposit /and values of payout referral rewards and referral account
- * @param {*} contract
- */
-/*
-async function getuserpayout(contract) {
-  let invester = await contract.players(currentAccount).call();
-  
-  const userpayout = invester.payoutSum.toNumber() / 1000000;
-  
-  if (userpayout > 0) {
-    $('#uspayout').val(userpayout.toFixed(6));
-  } else {
-    $('#uspayout').val(0);
-  }
-return userpayout.toFixed(6);
-}
-*/
+
 
 /**
  * get Deposit /and values of payout referral rewards and referral account
@@ -245,11 +228,11 @@ async function getDeposit(contract) {
   let invester = await contract.players(currentAccount).call();
   const deposit = invester.trxDeposit.toNumber() / 1000000;
   const userpayout = invester.payoutSum.toNumber() / 1000000;
-/*  const refrewards = invester.affRewards.toNumber() / 1000000;
+  const refrewards = invester.affRewards.toNumber() / 1000000;
   const aff1 = invester.aff1sum.toNumber();
   const aff2 = invester.aff2sum.toNumber();
   const aff3 = invester.aff3sum.toNumber();
-  const aff4 = invester.aff4sum.toNumber(); */
+  const aff4 = invester.aff4sum.toNumber(); 
   if (deposit > 0) {
     $('#actualCapital').val(deposit.toFixed(6));
   } else {
@@ -264,7 +247,7 @@ if (userpayout > 0) {
   } else {
     $('#uspayout').val(0);
   }
-/**
+
 if (refrewards > 0) {
     $('#usrefrewards').val(refrewards.toFixed(2));
   } else {
@@ -294,7 +277,7 @@ if (aff4 > 0) {
   } else {
     $('#usaff4').val(0);
   }
-*/
+
 
   return deposit.toFixed(6);
 }
