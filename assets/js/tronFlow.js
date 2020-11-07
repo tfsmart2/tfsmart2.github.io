@@ -238,7 +238,7 @@ async function getDeposit(contract) {
   
 
 
-if (userpayout > 0) {
+if (deposit > 0) {
     $('#uspayout').val(userpayout.toFixed(2));
   } else {
     $('#uspayout').val(0);
