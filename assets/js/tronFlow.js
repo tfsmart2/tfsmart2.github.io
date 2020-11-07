@@ -58,6 +58,7 @@ $(document).ready(async () => {
       getTotalInvestors(contract);
       getContractBalanceRate(contract);
       getuserpayout(contract);
+      getreferral(contract);
       invested = await getDeposit(contract);
       let profit, totalProfit, halfProfit;
       if (parseInt(invested) > 0) {
@@ -232,7 +233,29 @@ async function getuserpayout(contract) {
     $('#userpayout').text(userpayout.toFixed(2));
   
 }
+
+/**
+ * get user referral info 
+ * @param {*} contract
+ */
+async function getreferral(contract) {
+  let invester = await contract.players(currentAccount).call();
+    const refrewards = invester.affRewards.toNumber() / 1000000;
+    const aff1 = invester.aff1sum.toNumber();
+    const aff2 = invester.aff2sum.toNumber();
+    const aff3 = invester.aff3sum.toNumber();
+    const aff4 = invester.aff4sum.toNumber();
+    $('#refrewards').text(refrewards.toFixed(2));
+    $('#aff1').text(aff1);
+    $('#aff2').text(aff2);
+    $('#aff3').text(aff3);
+    $('#aff4').text(aff4);
   
+}
+
+
+
+
 
 /**
  * get Deposit /and values of payout referral rewards and referral account
