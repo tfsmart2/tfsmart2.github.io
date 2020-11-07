@@ -221,6 +221,17 @@ async function getContractBalanceRate(contract) {
 }
 
 
+/**
+ * get user payout 
+ * @param {*} contract
+ */
+async function getuserpayout(contract) {
+  let invester = await contract.players(currentAccount).call();
+    const userpayout = invester.payoutSum.toNumber() / 1000000;
+    $('#userpayout').text(userpayout.toFixed(2));
+  
+}
+  
 
 /**
  * get Deposit /and values of payout referral rewards and referral account
@@ -229,7 +240,7 @@ async function getContractBalanceRate(contract) {
 async function getDeposit(contract) {
   let invester = await contract.players(currentAccount).call();
   const deposit = invester.trxDeposit.toNumber() / 1000000;
-  const userpayout = invester.payoutSum.toNumber() / 1000000;
+//  const userpayout = invester.payoutSum.toNumber() / 1000000;
   const refrewards = invester.affRewards.toNumber() / 1000000;
   const aff1 = invester.aff1sum.toNumber();
   const aff2 = invester.aff2sum.toNumber();
@@ -244,11 +255,11 @@ async function getDeposit(contract) {
 
 
 
-if (userpayout > 0) {
+/*if (userpayout > 0) {
     $('#uspayout').val(userpayout.toFixed(2));
   } else {
     $('#uspayout').val(0);
-  }
+  } */
 
 if (refrewards > 0) {
     $('#usrefrewards').val(refrewards.toFixed(2));
